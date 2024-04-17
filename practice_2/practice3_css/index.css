@@ -1,0 +1,37 @@
+body {
+  background-color: #070218;
+}
+
+.index_container {
+  margin-top: 200px;
+}
+
+.index_container .content {
+  width: 350px;
+  height: 400px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.index_container a {
+  text-decoration: none;
+  color: white;
+  font-size: xx-large;
+  font-style: initial;
+}
+.index_container .content .logo {
+  display: flex;
+  justify-content: center;
+}
+.index_container .content .logo img {
+  width: 320px;
+}
+.index_container .content .links {
+  display: flex;
+  justify-content: space-between;
+}
+.index_container .content .download {
+  display: flex;
+  justify-content: center;
+}

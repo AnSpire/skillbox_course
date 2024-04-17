@@ -1,0 +1,43 @@
+.article_container {
+  margin: 0 auto;
+  padding: 80px 0;
+  width: 1170px;
+}
+.article_container .title {
+  margin: 0px 0px 40px;
+}
+.mb-10 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.text {
+  width: 872px;
+  margin: 0px 0px 40px;
+}
+
+.gray-box {
+  border-radius: 20px;
+  padding: 30px;
+  background-color: #f3f3f3;
+  margin: 0px 0px 40px;
+}
+.gray-box .text {
+  width: 692px;
+  margin: 0px 0px 10px;
+}
+.list {
+  padding-left: 15px;
+}
+.list :not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.image {
+  margin: 0px 0px 40px;
+}
+
+.sign {
+  display: inline-block;
+  width: 872px;
+  margin: 0px 0px 40px;
+}
