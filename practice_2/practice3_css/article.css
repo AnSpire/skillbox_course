@@ -1,3 +1,6 @@
+body {
+  font-family: Arial, Verdana, sans-serif;
+}
 .article_container {
   margin: 0 auto;
   padding: 80px 0;
@@ -5,6 +8,10 @@
 }
 .article_container .title {
   margin: 0px 0px 40px;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 60px;
+  color: #333;
 }
 .mb-10 {
   margin-top: 0px;
@@ -13,20 +20,52 @@
 .text {
   width: 872px;
   margin: 0px 0px 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #333;
 }
-
+.important_text {
+  border-radius: 20px;
+  padding: 50px 95px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 30px;
+  color: white;
+  background-color: #3f2aff;
+}
 .gray-box {
   border-radius: 20px;
   padding: 30px;
   background-color: #f3f3f3;
   margin: 0px 0px 40px;
 }
+.style-image {
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+.background-image1 {
+  background-image: url("../img/books.jpg");
+}
+.background-image2 {
+  background-image: url("../img/star.jpg");
+}
+
 .gray-box .text {
   width: 692px;
   margin: 0px 0px 10px;
 }
+
 .list {
   padding-left: 15px;
+}
+.list_item {
+  font-size: 20px;
+  color: #3f2aff;
+  border-bottom: 1px solid #3f2aff;
+}
+.list_item a {
+  text-decoration: none;
 }
 .list :not(:last-child) {
   margin-bottom: 20px;
@@ -40,4 +79,25 @@
   display: inline-block;
   width: 872px;
   margin: 0px 0px 40px;
+  font-size: 0;
+}
+.h2-style {
+  font-size: 40px;
+  line-height: 46px;
+  color: #333;
+}
+.h3-style {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 34px;
+  color: #333;
+}
+.figure_caption {
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #b6b6b6;
+  padding: 19px 0;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
 }

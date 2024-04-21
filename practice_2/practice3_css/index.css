@@ -1,5 +1,6 @@
 body {
   background-color: #070218;
+  font-family: Arial, Verdana, sans-serif;
 }
 
 .index_container {
@@ -17,8 +18,20 @@ body {
 .index_container a {
   text-decoration: none;
   color: white;
-  font-size: xx-large;
-  font-style: initial;
+}
+.links a {
+  font-size: 18px;
+  text-align: center;
+  line-height: 60px;
+  width: 100px;
+  height: 60px;
+  background-color: #3f2aff;
+  font-weight: 700;
+}
+.index_container .download a {
+  font-size: 18px;
+  background-color: none;
+  color: #3f2aff;
 }
 .index_container .content .logo {
   display: flex;
@@ -34,4 +47,5 @@ body {
 .index_container .content .download {
   display: flex;
   justify-content: center;
+  line-height: 40px;
 }
