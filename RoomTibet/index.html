@@ -6,13 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./layout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
   </head>
   <body>
     <section class="mountains">
       <header class="container">
         <div class="mobile-header">
           <div class="logo"><img src="./media/img/logo.png" alt="" /></div>
-          <input type="checkbox" id="burger" />
+          <input type="checkbox" id="burger" hidden/>
           <label for="burger"></label>
           <nav class="navigation-mobile">
             <div class="logo"></div>
@@ -134,11 +137,13 @@
           <nav class="navigation-desktop">
             <div class="logo"><img src="./media/img/logo.png" alt="" /></div>
             <ul class="links">
-              <li class="link"><a href="#">Lorem.</a></li>
-              <li class="link"><a href="#">Eius!</a></li>
-              <li class="link"><a href="#">Quos.</a></li>
-              <li class="link"><a href="#">Totam.</a></li>
-              <li class="link"><a href="#">Options.</a></li>
+              <li class="link"><a href="#">Главная</a></li>
+              <li class="link"><a href="#">Про гида</a></li>
+              <li class="link"><a href="#">Программа тура</a></li>
+              <li class="link"><a href="#">Стоимость</a></li>
+              <li class="link"><a href="#">Блог</a></li>
+              <li class="link"><a href="#">Контакты</a></li>
+              <button class="btn green-btn h44">Консультация</button>
             </ul>
           </nav>
         </div>
@@ -150,41 +155,395 @@
             с командой единомышленников
           </h1>
         </div>
-        <form
-          class="tour-form"
-          action="https://jsonplaceholder.typicode.com/posts"
-          method="POST"
-        >
-          <div class="form-row">
-            <label for="departure-city">Город вылета</label>
-            <select id="departure-city" name="departureCity">
-              <option selected>Санкт-Петербург</option>
-              <option>Москва</option>
-            </select>
+        
+          <div class="form-container">
+              <form class="tour-form">
+                  <div class="form-group">
+      
+                      <select class="form-input" id="location" name="location">
+                          <option value="">Локация для тура</option>
+                          <option value="1">Локация 1</option>
+                          <option value="2">Локация 2</option>
+                      </select>
+                      <span class="icon"> <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.2475 0.6574L8 6.7474L1.7525 0.6574C1.64088 0.548372 1.49103 0.487334 1.335 0.487334C1.17897 0.487334 1.02912 0.548372 0.9175 0.6574C0.863453 0.710356 0.820515 0.773562 0.791203 0.84332C0.76189 0.913078 0.746792 0.987984 0.746792 1.06365C0.746792 1.13932 0.76189 1.21422 0.791203 1.28398C0.820515 1.35374 0.863453 1.41694 0.9175 1.4699L7.56375 7.9499C7.68047 8.06367 7.83701 8.12734 8 8.12734C8.16299 8.12734 8.31953 8.06367 8.43625 7.9499L15.0825 1.47115C15.1369 1.41816 15.1802 1.35479 15.2097 1.2848C15.2393 1.21481 15.2545 1.13962 15.2545 1.06365C15.2545 0.987683 15.2393 0.912485 15.2097 0.842496C15.1802 0.772507 15.1369 0.709145 15.0825 0.65615C14.9709 0.547122 14.821 0.486084 14.665 0.486084C14.509 0.486084 14.3591 0.547122 14.2475 0.65615V0.6574Z" fill="#FDFDFD"/>
+                        </svg>
+                        
+                        </span>
+                      <label for="" class="form-label">выберите из списка</label>
+                  </div>
+                  <div class="form-group">
+                      <input class="form-input" type="date" id="date" name="date" placeholder="укажите диапазон">
+                      <span class="icon"> <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_196)">
+                        <path d="M16.3125 18H1.6875C0.75375 18 0 17.2463 0 16.3125V2.8125C0 1.87875 0.75375 1.125 1.6875 1.125H16.3125C17.2463 1.125 18 1.87875 18 2.8125V16.3125C18 17.2463 17.2463 18 16.3125 18ZM1.6875 2.25C1.3725 2.25 1.125 2.4975 1.125 2.8125V16.3125C1.125 16.6275 1.3725 16.875 1.6875 16.875H16.3125C16.6275 16.875 16.875 16.6275 16.875 16.3125V2.8125C16.875 2.4975 16.6275 2.25 16.3125 2.25H1.6875Z" fill="#FDFDFD"/>
+                        <path d="M5.0625 4.5C4.7475 4.5 4.5 4.2525 4.5 3.9375V0.5625C4.5 0.2475 4.7475 0 5.0625 0C5.3775 0 5.625 0.2475 5.625 0.5625V3.9375C5.625 4.2525 5.3775 4.5 5.0625 4.5ZM12.9375 4.5C12.6225 4.5 12.375 4.2525 12.375 3.9375V0.5625C12.375 0.2475 12.6225 0 12.9375 0C13.2525 0 13.5 0.2475 13.5 0.5625V3.9375C13.5 4.2525 13.2525 4.5 12.9375 4.5ZM17.4375 6.75H0.5625C0.2475 6.75 0 6.5025 0 6.1875C0 5.8725 0.2475 5.625 0.5625 5.625H17.4375C17.7525 5.625 18 5.8725 18 6.1875C18 6.5025 17.7525 6.75 17.4375 6.75Z" fill="#FDFDFD"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1_196">
+                        <rect width="18" height="18" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        
+                        
+                        
+                        
+                        </span>
+                      <label for="" class="form-label">укажите диапазон </label>
+                  </div>
+                  <div class="form-group">
+                      <select class="form-input" id="participants" name="participants">
+                          <option value="">Участники</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                      </select>
+                      <span class="icon"> <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.2475 0.6574L8 6.7474L1.7525 0.6574C1.64088 0.548372 1.49103 0.487334 1.335 0.487334C1.17897 0.487334 1.02912 0.548372 0.9175 0.6574C0.863453 0.710356 0.820515 0.773562 0.791203 0.84332C0.76189 0.913078 0.746792 0.987984 0.746792 1.06365C0.746792 1.13932 0.76189 1.21422 0.791203 1.28398C0.820515 1.35374 0.863453 1.41694 0.9175 1.4699L7.56375 7.9499C7.68047 8.06367 7.83701 8.12734 8 8.12734C8.16299 8.12734 8.31953 8.06367 8.43625 7.9499L15.0825 1.47115C15.1369 1.41816 15.1802 1.35479 15.2097 1.2848C15.2393 1.21481 15.2545 1.13962 15.2545 1.06365C15.2545 0.987683 15.2393 0.912485 15.2097 0.842496C15.1802 0.772507 15.1369 0.709145 15.0825 0.65615C14.9709 0.547122 14.821 0.486084 14.665 0.486084C14.509 0.486084 14.3591 0.547122 14.2475 0.65615V0.6574Z" fill="#FDFDFD"/>
+                        </svg>
+                        
+                        </span>
+                      <label for="" class="form-label">минимум 4 человека</label>
+                  </div>
+                  <button class="btn green-btn m0"  type="submit">Найти программу</button>
+              </form>
           </div>
-          <div class="form-row">
-            <label for="country">Страна</label>
-            <select id="country" name="country">
-              <option>Австралия</option>
-              <option>США</option>
-              <option>Великобритания</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="arrival-date">Дата прибытия</label>
-            <input
-              type="date"
-              id="arrival-date"
-              name="arrivalDate"
-              value="2021-10-18"
-            />
-          </div>
-          <button class="btn" type="submit">Найти программу</button>
-        </form>
+      
         <button class="btn none-btn mb-50" type="submit">
           Найти программу
         </button>
       </div>
     </section>
+    <div class="container">
+    <section class="programs mb-50">
+      <div class="image-wrapper">
+        <img src="./media/img/image2.png" alt="Image 1" class="image image1">
+        <img src="./media/img/image1.png" alt="Image 2" class="image image2">
+        <svg class="play" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="50" height="50" rx="25" fill="#FDFDFD" fill-opacity="0.6"/>
+          <path d="M22.2427 17.6557C21.9639 17.4965 21.6482 17.4132 21.3271 17.4143C21.0061 17.4154 20.691 17.5008 20.4133 17.6619C20.1356 17.823 19.9051 18.0542 19.7448 18.3324C19.5845 18.6106 19.5001 18.926 19.5 19.247V30.7549C19.5001 31.0759 19.5845 31.3913 19.7448 31.6695C19.9051 31.9477 20.1356 32.1789 20.4133 32.34C20.691 32.5012 21.0061 32.5865 21.3271 32.5876C21.6482 32.5887 21.9639 32.5055 22.2427 32.3462L32.3113 26.5914C32.5917 26.431 32.8248 26.1993 32.9869 25.9199C33.1489 25.6404 33.2343 25.3231 33.2343 25C33.2343 24.677 33.1489 24.3597 32.9869 24.0802C32.8248 23.8008 32.5917 23.5691 32.3113 23.4087L22.2427 17.6557Z" fill="#1A3E3E"/>
+          </svg>
+          
+    </div>
+    <div class="text-content">
+        <p class="orange"> о нашем подходе</p>
+        <h2 class="title">Исследуйте все горные массивы мира вместе с нами</h2>
+        <p class="description">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur" и занялся его поисками в классической латинской литературе.</p>
+        <button class="btn green-btn">Программа тура</button>
+    </div>
+    </section>
+  </div>
+  <section class="best-programs">
+    <div class="container">
+      <div class="content">
+      <div class="text-content">
+        <div><span class="orange">наше предложение</span>
+        <h2 class="title">Лучшие программы для тебя</h2></div>
+        <p class="description" >Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа.</p>
+        <div class="advantages">
+          <img src="./media/img/icon1.png" alt=""><p><b class="bold">Безопасный поход</b> <br> Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.</p>
+        </div>
+        <div class="advantages">
+          <img src="./media/img/icon2.png" alt=""><p><b class="bold">Лояльные цены</b> <br>Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.</p>
+        </div>
+        <div class="advantages">
+          <img src="./media/img/icon3.png" alt=""><p><b class="bold">Опытный гид</b> <br>Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.</p>
+        </div>
+        <button class="btn green-btn "> Стоимость програм</button>
+      </div>
+      <div class="images">
+        <div><img src="./media/img/image3.png" alt="image3"></div>
+        <div><img src="./media/img/image4.png" alt="image4"></div>
+        <div><img src="./media/img/image5.png" alt="image5"></div>
+        <div><img src="./media/img/image6.png" alt="image6"></div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="popular-directions">
+    <div class="container">
+      <div class="heading">
+        <p class="orange">по версии отдыхающих</p>
+        <h2 class="title">Популярные направления</h2>
+      </div>
+      <div class="content">
+        
+      
+      <div class="image-card">
+
+          <img src="./media/img/image7.png" alt="Ландшафтное изображение" class="image">
+          <div class="rating">
+              <span class="star"><img src="./media/svg/star.svg" alt=""></span>
+              <span class="value">4.9</span>
+          </div>
+          <div class="bottom-text">
+              <div class="desc">
+              <h3>Озеро возле гор</h3>
+              <p>романтическое приключение</p>
+            </div>
+            <div class="price">
+              <p>480 $</p>
+            </div>
+        </div>
+      </div>
+      <div class="image-card">
+          <img src="./media/img/image8.png" alt="Ландшафтное изображение" class="image">
+          <div class="rating">
+              <span class="star"><img src="./media/svg/star.svg" alt=""></span>
+              <span class="value">4.9</span>
+          </div>
+          <div class="bottom-text">
+              <div class="desc">
+              <h3>Ночь в горах</h3>
+              <p>в компании друзей</p>
+            </div>
+            <div class="price">
+              <p>480 $</p>
+            </div>
+        </div>
+      </div>
+      <div class="image-card">
+          <img src="./media/img/image9.png" alt="Ландшафтное изображение" class="image">
+          <div class="rating">
+              <span class="star"><img src="./media/svg/star.svg" alt=""></span>
+              <span class="value">4.9</span>
+          </div>
+          <div class="bottom-text">
+              <div class="desc">
+              <h3>Йога в горах</h3>
+              <p>романтическое приключение</p>
+            </div>
+            <div class="price">
+              <p>480 $</p>
+            </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="btn green-btn">Рейтинг направлений</button>
+    </div>
+  </section>
+  <section class="blog">
+    <div class="container">
+    <div class="heading">
+      <p class="orange">делимся впечатлениями</p>
+      <h2 class="title">Блог о путешествиях</h2>
+    </div>
+    <div class="content">
+      <div class="cards">
+        <div class="card"><img src="./media/img/image10.png" alt="">
+        <div class="info">
+          <h2 class="title underline">Красивая Италя, какая она в реальности?</h2>
+          <p class="description">Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.</p>
+          <div class="date-more">
+            <p class="orange">01/04/2023</p>
+            <span class="underline"><a href="" class="more">читать статью</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="card"><img src="./media/img/image11.png" alt="">
+        <div class="info">
+          <h2 class="title underline">Долой сомнения! Весь мир открыт для вас!</h2>
+          <p class="description">Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации ... независимые способы реализации соответствующих условий активизации ...Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации ... независимые способы реализации соответствующих условий активизации ...</p>
+          <div class="date-more">
+            <p class="orange">01/04/2023</p>
+            <span class="underline"><a href="" class="more">читать статью</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="card"><img src="./media/img/image12.png" alt="">
+        <div class="info">
+          <h2 class="title  underline">Как подготовиться к путешествию в одиночку? </h2>
+          <p class="description">Для современного мира базовый вектор развития предполагает. </p>
+          <div class="date-more">
+            <p class="orange">01/04/2023</p>
+            <span class="underline"><a href="" class="more">читать статью</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="card"><img src="./media/img/image13.png" alt="">
+        <div class="info">
+          <h2 class="title  underline">Красивая Италя, какая она в реальности?</h2>
+          <p class="description">Для современного мира базовый</p>
+          <div class="date-more">
+            <p class="orange">01/04/2023</p>
+            <span class="underline"><a href="" class="more">читать статью</a></span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <button class="btn green-btn">Другие материалы</button>
+  </div>
+  </section>
+  <section class="pinterest">
+    <div class="container">
+    <div class="heading">
+      <p class="orange">фото-отчет</p>
+      <h2 class="title">Делимся впечатлениями</h2>
+    </div>  
+    <div class="content">
+      <div class="grig-item narrow"><img src="./media/img/image20.png" alt=""></div>
+      <div class="grid-item wide"><img src="./media/img/image14.png" alt=""></div>
+      <div class="grid-item"><img src="./media/img/image15.png" alt=""></div>
+      <div class="grid-item"><img src="./media/img/image16.png" alt=""></div>
+      <div class="grid-item"><img src="./media/img/image18.png" alt=""></div>
+      <div class="grig-item narrow"><img src="./media/img/image21.png" alt=""></div>
+      <div class="grid-item wide"><img src="./media/img/image17.png" alt=""></div>
+      <div class="grid-item"><img src="./media/img/image19.png" alt=""></div>
+    </div>
+    <div class="btn green-btn">Наш pinterest</div>
+  </div>
+  </section>
+  <section class="subscribe-news">
+    <p class="orange">фото-отчет</p>
+    <h2 class="title">Делимся впечатлениями</h2>
+    <form class="subscription-form">
+        <input type="email" class="email-input" placeholder="name@domain.com" required>
+        <button type="submit" class="btn green-btn">Подписаться на новости</button>
+    </form>
+    <p class="agreement">
+        подписываясь на новости, вы автоматически соглашаетесь с
+        <a href="#" class="link">условиями обработки персональных данных</a> и 
+        <a href="#" class="link">правилами рекламных рассылок</a>
+    </p>
+  </section>
+  <footer class="footer">
+    
+    <div class="container">
+      <section class="subscribe-news__desctop">
+          <div class="heading">
+            <p class="orange">актуально</p>
+            <h2 class="title">Получайте полезные рассылки о путешествиях</h2>
+          </div>
+          <div class="subscription-block">
+            <label for="email" class="subscription-label">Введите e-mail адрес</label>
+            <div class="subscription-input-container">
+                <input type="email" id="email" class="subscription-input" placeholder="name@domain.com">
+                <button class="btn green-btn">Подписаться на новости</button>
+            </div>
+            <p class="subscription-agreement">
+                подписываясь на новости, вы автоматически соглашаетесь с <a href="#" class="subscription-link">условиями обработки персональных данных</a> и <a href="#" class="subscription-link">правилами рекламных рассылок</a>
+            </p>
+        </div>
+      </section>
+      <div class="info">
+        <div class="about h-full info-item">
+          <h1 class="name">Компания «РумТибет»</h1>
+          <p class="description">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney.</p>
+          <div class="call-us">
+            <a href="mailto:info@domain.com" class="mail">info@domain.com</a>
+            <a href="tel:+7 (123) 456-78-90">+7 (123) 456-78-90</a>
+          </div>
+          <div class="socials">
+            <div><img src="./media/svg/tg.svg" alt=""></div>
+            <div><img src="./media/svg/vk.svg" alt=""></div>
+            <div><img src="./media/svg/pinterest.svg" alt=""></div>
+            <div><img src="./media/svg/skype.svg" alt=""></div>
+          </div>
+        </div>
+        <div class="services h-full info-item">
+          <h1 class="name">Наши услуги</h1>
+          <ul>
+            <li>
+              <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_36487_301)">
+              <path d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z" fill="#FDFDFD"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_36487_301">
+              <rect width="9.87491" height="14" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+              Прогулки в горы летом
+              </li> 
+          <li>
+                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_36487_301)">
+          <path d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z" fill="#FDFDFD"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_36487_301">
+          <rect width="9.87491" height="14" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+          Зимние походы в горы
+          </li>
+          <li>
+                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_36487_301)">
+          <path d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z" fill="#FDFDFD"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_36487_301">
+          <rect width="9.87491" height="14" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+          Посещение храмов в горах
+          </li>
+          <li>
+                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_36487_301)">
+          <path d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z" fill="#FDFDFD"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_36487_301">
+          <rect width="9.87491" height="14" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+          Экстремальные виды туризма
+          </li>
+          <li>
+                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_36487_301)">
+          <path d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z" fill="#FDFDFD"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_36487_301">
+          <rect width="9.87491" height="14" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+          Походы в джунглях Амазонии
+          </li>
+          <li>
+                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_36487_301)">
+          <path d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z" fill="#FDFDFD"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_36487_301">
+          <rect width="9.87491" height="14" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+          Поездка в Африку
+          </li>
+          </ul>
+        </div>
+        <div class="important h-full info-item">
+          <h1 class="name">Важно для путешествий</h1>
+          <ul>
+            <li><img src="./media/svg/arrow.svg" alt=""><span>Как собрать в долгий поход?</span></li>
+            <li><img src="./media/svg/arrow.svg" alt=""><span>Жизненно важные предметы для похода</span></li>
+            <li><img src="./media/svg/arrow.svg" alt=""><span>Медицинская страховка, гарантии безопасности</span></li>
+            <li><img src="./media/svg/arrow.svg" alt=""><span>Если вы врач - загляните сюда</span></li>
+          </ul>
+        </div>
+      </div>
+       
+    </div>
+    <div class="policy">
+      <div class="container">
+      <div><p>ИП Константинопольский К.К., 2023</p></div>
+      <div><p ><a class="document" href="">Политика обработки персональных данных</a></p></div>
+    </div>
+    </div>
+  </footer>
   </body>
 </html>

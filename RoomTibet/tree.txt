@@ -1,0 +1,57 @@
+.
+├── index.css
+├── index.html
+├── layout.css
+├── media
+│   ├── fonts
+│   │   └── nextart
+│   │       ├── NEXT ART_Bold.otf
+│   │       ├── NEXT ART_Heavy.otf
+│   │       ├── NEXT ART_Light.otf
+│   │       ├── NEXT ART_Regular.otf
+│   │       └── NEXT ART_SemiBold.otf
+│   ├── img
+│   │   ├── background.png
+│   │   ├── icon1.png
+│   │   ├── icon2.png
+│   │   ├── icon3.png
+│   │   ├── image1.png
+│   │   ├── image10.png
+│   │   ├── image11.png
+│   │   ├── image12.png
+│   │   ├── image13.png
+│   │   ├── image14.png
+│   │   ├── image15.png
+│   │   ├── image16.png
+│   │   ├── image17.png
+│   │   ├── image18.png
+│   │   ├── image19.png
+│   │   ├── image2.png
+│   │   ├── image20.png
+│   │   ├── image21.png
+│   │   ├── image3.png
+│   │   ├── image4.png
+│   │   ├── image5.png
+│   │   ├── image6.png
+│   │   ├── image7.png
+│   │   ├── image8.png
+│   │   ├── image9.png
+│   │   └── logo.png
+│   └── svg
+│       ├── X.svg
+│       ├── arrow.svg
+│       ├── burger.svg
+│       ├── play.svg
+│       └── star.svg
+├── node_modules
+│   └── normalize.css
+│       ├── CHANGELOG.md
+│       ├── LICENSE.md
+│       ├── README.md
+│       ├── normalize.css
+│       └── package.json
+├── package-lock.json
+├── package.json
+└── tree.txt
+
+8 directories, 47 files
